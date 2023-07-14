@@ -21,10 +21,9 @@ class MainActivity : AppCompatActivity() {
 
 
         drawerLayout = findViewById(R.id.drawerLayout)
-        navView = findViewById(R.id.navigation
-        )
+        navView = findViewById(R.id.navigation)
 
-        toggle = ActionBarDrawerToggle(this,drawerLayout,R.string.open,R.string.close)
+        toggle = ActionBarDrawerToggle(this, drawerLayout, R.string.open, R.string.close)
         drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
 
@@ -32,17 +31,17 @@ class MainActivity : AppCompatActivity() {
 
 
         navView.setNavigationItemSelectedListener {
-            when(it.itemId){
-                R.id.miItem1 -> Toast.makeText(this,"Clicked item 1", Toast.LENGTH_SHORT).show()
-                R.id.miItem2 -> Toast.makeText(this,"Clicked item 2", Toast.LENGTH_SHORT).show()
-                R.id.miItem3 -> Toast.makeText(this,"Clicked item 3", Toast.LENGTH_SHORT).show()
+            when (it.itemId) {
+                R.id.miItem1 -> Toast.makeText(this, "Clicked item 1", Toast.LENGTH_SHORT).show()
+                R.id.miItem2 -> Toast.makeText(this, "Clicked item 2", Toast.LENGTH_SHORT).show()
+                R.id.miItem3 -> Toast.makeText(this, "Clicked item 3", Toast.LENGTH_SHORT).show()
             }
             true
         }
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if (toggle.onOptionsItemSelected(item)){
+        if (toggle.onOptionsItemSelected(item)) {
             return true
         }
         return super.onOptionsItemSelected(item)
